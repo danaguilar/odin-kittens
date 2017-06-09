@@ -1,0 +1,7 @@
+<h1> It's <%= @kitten.name %>!</h1>
+<h3> He is <%= @kitten.age %> years old! </h3>
+<ul>
+  <li> He is <%= @kitten.cuteness %> cute!  </li>
+  <li> He is <%= @kitten.softness %> soft! </li>
+</ul>
+<%= link_to "Edit", [:edit, @kitten] %> <%= link_to "Delete" ,  @kitten, method: :delete, data: { confirm: "Say goodbye to #{@kitten.name}?" }%>

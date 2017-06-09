@@ -1,0 +1,9 @@
+<h1> All da kittehs! </h1>
+<ul>
+  <% @kittens.each do |kitten| %>
+  <li> <%= link_to kitten.name, kitten %> is <%= kitten.age %> years old. He is <%= kitten.cuteness %> cute and <%= kitten.softness %> soft!
+    <%= link_to "Delete" ,  kitten, method: :delete, data: { confirm: "Say goodbye to #{kitten.name}?" }%>
+  </li>
+  <% end %>
+  <li> <%= link_to "New Kitteh", new_kitten_url %> </li>
+</ul>
